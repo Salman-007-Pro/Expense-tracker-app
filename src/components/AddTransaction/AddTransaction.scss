@@ -1,0 +1,70 @@
+@import "./../../style/custom-variables.scss";
+.transaction-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  width: 80%;
+
+  .transaction-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    border-bottom: 1px solid $color-border;
+    padding: 1rem;
+    width: 80%;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+  .transaction-box {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+    .transaction-input-box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: start;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+      .transaction-input-label {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        span {
+          font-size: 1.3rem;
+          font-weight: 400;
+        }
+      }
+      .transaction-input-btn {
+        border: none;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        padding: 1rem 2rem;
+        color: white;
+        background: #9c88ff;
+        box-shadow: 5px 5px 16px #b3b4ba, -5px -5px 16px #ffffff;
+      }
+      .transaction-input-field {
+        font-size: 1.6rem;
+        font-weight: 600;
+        border: none;
+        padding: 0.5rem 1rem;
+        background: #e9eaf2;
+        box-shadow: inset 5px 5px 16px #b3b4ba, inset -5px -5px 16px #ffffff;
+        transition: all 0.2s;
+        &:focus {
+          border: none;
+          outline: none;
+          background: #e9eaf2;
+          box-shadow: 5px 5px 16px #b3b4ba, -5px -5px 16px #ffffff;
+        }
+      }
+    }
+  }
+}

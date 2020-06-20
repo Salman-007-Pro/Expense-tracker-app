@@ -1,0 +1,14 @@
+.balance-wrapper{
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  h3{
+    font-weight: 500;
+    padding: 0.5rem;
+  }
+  h2{
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+}

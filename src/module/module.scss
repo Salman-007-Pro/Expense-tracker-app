@@ -1,0 +1,13 @@
+.module-box-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: fit-content;
+  padding: 2rem;
+  background: #e9eaf2;
+  box-shadow: 5px 5px 30px #b8b9bf, -5px -5px 30px #ffffff;
+}

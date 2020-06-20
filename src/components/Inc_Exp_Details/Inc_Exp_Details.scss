@@ -1,0 +1,30 @@
+@import "./../../style/custom-variables.scss";
+.Inc_Exp_Details-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  align-items: center;
+  width: 60%;
+  height: 10vh;
+  background: linear-gradient(145deg, #f9faff, #d2d3da);
+  box-shadow:  5px 5px 23px #b8b9bf,
+               -5px -5px 23px #ffffff;
+  .Inc_Exp_Details {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    justify-content: center;
+    letter-spacing: 1px;
+    height: 60%;
+    text-transform: uppercase;
+    &-right{
+    border-right: 1px solid 	$color-border;
+    }
+    .inc-color{
+      color: green;
+    }
+    .exp-color{
+      color: red;
+    }
+  }
+}

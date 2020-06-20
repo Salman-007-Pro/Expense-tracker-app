@@ -1,0 +1,75 @@
+@import "./../../style/custom-variables.scss";
+.history-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+
+  .history-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    border-bottom: 1px solid $color-border;
+    padding: 1rem;
+    width: 80%;
+    letter-spacing: 1px;
+  }
+  .history-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    .history-income {
+      border-right: 3px solid green;
+    }
+    .history-expense {
+      border-right: 3px solid red;
+    }
+    .history-income-expense {
+      display: flex;
+      flex-direction: row;
+      width: 80%;
+      align-items: center;
+      text-transform: capitalize;
+      position: relative;
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      background: #e9eaf2;
+      box-shadow: 5px 5px 15px #9e9fa5, -5px -5px 15px #ffffff;
+      .history-des {
+        text-align: left;
+        flex: 5;
+        padding: 1rem 0.8rem;
+      }
+      .history-price {
+        flex: 1;
+        padding: 1rem 0.8rem;
+        text-align: end;
+      }
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+
+      .history-del-btn {
+        position: absolute;
+        top: 50%;
+        left: -6%;
+        display: block;
+        opacity: 0;
+        width: 20px;
+        transform: translateY(-50%);
+        transition: all .5s;
+        color: white;
+        background: #ff0000;
+        box-shadow: inset 5px 5px 15px #cc0000, inset -5px -5px 15px #ff0000;
+      }
+      &:hover .history-del-btn {
+        left: -6%;
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+}

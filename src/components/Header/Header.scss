@@ -1,0 +1,7 @@
+@import "./../../style/custom-variables.scss";
+.header-wrapper{
+  text-transform: capitalize;
+  font-family: $font-family;
+  margin-bottom:1rem ;
+  // border: 1px solid red;
+}
