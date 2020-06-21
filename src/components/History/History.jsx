@@ -1,25 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TransactionState } from "context/globalContext";
 import "./History.scss";
 const History = (props) => {
+  const { Transaction,delTransaction } = useContext(TransactionState);
+  const delHandler=(type,id)=>{
+    delTransaction(type,id);
+  }
   return (
     <div className="history-wrapper">
       <h2 className="history-heading">History</h2>
       <div className="history-box">
-        <div className="history-income-expense history-income">
-          <div className="history-des">Sell Pc</div>
-          <div className="history-price">+$300</div>
-          <div className="history-del-btn">X</div>
-        </div>
-        <div className="history-income-expense history-income">
-          <div className="history-des">Sell Pc</div>
-          <div className="history-price">+$30</div>
-          <div className="history-del-btn">X</div>
-        </div>
-        <div className="history-income-expense history-expense">
-          <div className="history-des">Buy new Car</div>
-          <div className="history-price">-$300</div>
-          <div className="history-del-btn">X</div>
-        </div>
+        {Transaction.Inc.map((cur, index) => {
+          return (
+            <div className="history-income-expense history-income" key={index}>
+              <div className="history-des">{cur.descriptions}</div>
+              <div className="history-price">+${cur.amount.toFixed(2)}</div>
+              <div className="history-del-btn" onClick={()=>delHandler(cur.type,cur.ID)}>X</div>
+            </div>
+          );
+        })}
+        {Transaction.Exp.map((cur, index) => {
+          return (
+            <div className="history-income-expense history-expense" key={index}>
+              <div className="history-des">{cur.descriptions}</div>
+              <div className="history-price">-${(cur.amount*-1).toFixed(2)}</div>
+              <div className="history-del-btn" onClick={()=>delHandler(cur.type,cur.ID)}>X</div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
