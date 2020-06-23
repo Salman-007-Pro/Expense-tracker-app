@@ -64,6 +64,7 @@ const AddTransaction = (props) => {
           </div>
         </form>
       </div>
+      <p className="app-creator">Created By Muhammad Salman Asif @2020</p>
     </div>
   );
 };
